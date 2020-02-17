@@ -81,6 +81,11 @@ $ git reset --hard HEAD~1
 $ git checkout -b <branch-name> HEAD~1
 ```
 
+### 4) 로컬에만 있어야 하는 파일을 push 했을 때
+```console
+$ git rm --cached <filename>
+```
+
 # 4. 참고
 - https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow
 - https://gmlwjd9405.github.io/2017/10/27/how-to-collaborate-on-GitHub-1.html
