@@ -4,8 +4,8 @@
   - https://github.com/KoreanNationalElection/KoreaGeneralElection.git
 - local : repository를 로컬로 clone
 
-### 1) dev 브랜치 생성
-- remote : web gui에서 생성 후 default branch로 지정
+### 1) 깃헙에서 dev 브랜치 생성
+- remote : web gui에서 생성
 
 ### 2) repository를 로컬로 clone
 ```console
@@ -16,6 +16,11 @@ $ git clone https://github.com/KoreanNationalElection/KoreaGeneralElection.git
 $ git init
 $ git remote add origin https://github.com/KoreanNationalElection/KoreaGeneralElection.git
 $ git fetch origin master
+```
+
+### 3) local에 dev 브랜치 생성
+```console
+$ git checkout -b dev origin/dev
 ```
 
 <br>
@@ -37,7 +42,7 @@ $ git checkout <branch-name>
 
 ### 2) 새로운 기능 브랜치를 커밋 후 원격 저장소에 push
 ```console
-$ git commit -a -m "Commit Message" # 스테이징 + 커밋 동시에
+$ git commit -am "Commit Message" # 스테이징 + 커밋 동시에
 $ git push -u origin <branch-name>
 ```
 
@@ -63,13 +68,13 @@ $ git push --delete origin <branch-name> # 원격 브랜치 삭제
 ### 1) 브랜치가 아닌 dev에서 작업하고 있었다면
 커밋 전이라면 새로운 브랜치를 만들면 옮겨짐
 ```console
-$ git checkout -b <branch-name>
+$ git checkout -b <branch-name> dev
 ```
 
 ### 2) 수정 후 커밋 했는데 dev에서 작업하고 있었다면
 현재 상태로 새로운 브랜치를 만들고, dev를 커밋 전의 상태로 되돌린다
 ```console
-$ git checkout -b <branch-name>
+$ git checkout -b <branch-name> dev
 $ git checkout dev
 $ git reset --hard HEAD~1 
 ```
