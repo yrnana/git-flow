@@ -59,28 +59,6 @@ $ git push --delete origin <branch-name> # 원격 브랜치 삭제
 
 <br>
 
-# 3. 상황별 대처
-### 1) 브랜치가 아닌 dev에서 작업하고 있었다면
-커밋 전이라면 새로운 브랜치를 만들면 옮겨짐
-```console
-$ git checkout -b <branch-name>
-```
-
-### 2) 수정 후 커밋 했는데 dev에서 작업하고 있었다면
-현재 상태로 새로운 브랜치를 만들고, dev를 커밋 전의 상태로 되돌린다
-```console
-$ git checkout -b <branch-name>
-$ git checkout dev
-$ git reset --hard HEAD~1 
-```
-
-### 3) 브랜치를 만들어야 하는데, dev에 코드리뷰가 끝나지 않은 커밋이 존재함
-기존 작업을 브랜치에서 하지 않고 바로 dev에 커밋하여 pr을 날린 경우임
-해당 커밋이 생성되기 전의 상태로 새로운 브랜치를 만듬
-```console
-$ git checkout -b <branch-name> HEAD~1
-```
-
 # 4. 참고
 - https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow
 - https://gmlwjd9405.github.io/2017/10/27/how-to-collaborate-on-GitHub-1.html
