@@ -1,2 +1,1 @@
-# git-test
-# first-commit
+# git으로 협업하기
