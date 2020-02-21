@@ -97,7 +97,7 @@ $ git checkout -b <branch-name> HEAD~1
 $ git rm --cached <filename>
 ```
 
-### 5) dev가 과거 버전일때
+### 5) dev가 과거 버전인 상태에서 브랜치를 수정했을 
 ```
 $ git checkout dev
 $ git pull origin dev
